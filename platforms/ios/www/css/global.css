@@ -1,0 +1,457 @@
+/* *********************************************************/
+/* Charte graphique AEECL **********************************/
+/* Créé par Julien Sulu HOAREAU ****************************/
+/* julien.hoareau@ecl14.ec-lyon.fr *************************/
+/* Inspiré de Central'isation, par Raphael KICHOT Moulin ***/
+/* raphael.moulin@ecl13.ec-lyon.fr *************************/
+/* *********************************************************/
+/* assets/css/global.css ***********************************/
+/* *********************************************************/
+/* Dernière modification : le 02/07/15 *********************/
+/* *********************************************************/
+
+/* VARIABLES */
+
+:root {
+	/* Corps de la page */
+	--body-color: rgba(34, 34, 34, 1);
+	--body-background: rgba(254, 254, 254, 1);
+
+	/* Header */
+	--header-background: rgba(34, 34, 34, 1);
+	--header-color: rgba(71, 163, 218, 1); /* Couleur de thème de la page */
+
+	/* Menus */
+	--menu-header-color: rgba(255, 255, 255, 0.5);
+	--menu-header-background: rgba(51, 51, 51, 1);
+	--topmenu-border: rgba(90, 90, 90, 1);
+
+	/* Alertes */
+	--alerte-erreur-background: rgba(255, 235, 235, 1);
+	--alerte-erreur-border: rgba(255, 204, 204, 1);
+	--alerte-erreur-color: rgba(187, 0, 0, 1);
+	--alerte-attention-background: rgba(247, 238, 217, 1);
+	--alerte-attention-border: rgba(255, 228, 173, 1);
+	--alerte-attention-color: rgba(194, 129, 0, 1);
+	--alerte-succes-background: rgba(204, 255, 204, 1);
+	--alerte-succes-border: rgba(178, 235, 178, 1);
+	--alerte-succes-color: rgba(0, 153, 0, 1);
+	--alerte-info-background: rgba(209, 224, 255, 1);
+	--alerte-info-border: rgba(184, 207, 255, 1);
+	--alerte-info-color: rgba(0, 51, 153, 1);
+}
+
+
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+/* Reset */
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+html{position: relative;min-height: 100%}
+body {
+    font-family: 'Open Sans', 'Segoe UI', 'Helvetica Neue', Calibri, Arial, sans-serif;
+    color: rgba(34, 34, 34, 1);
+    background: rgba(254, 254, 254, 1);
+    margin:0 0 2.5em;
+}
+
+a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+.container {
+	width: 100%;
+	min-height: 100%;
+	height: 100%;
+}
+
+.container > header {
+	width: 100%;
+	margin: 0 auto;
+	font-size: 1.3em; 
+	padding: 0.5em 2% 0.5em;
+	background: rgba(34, 34, 34, 1);
+	color: rgba(71, 163, 218, 1);
+}
+
+.container > header > img {
+	display:inline-block;
+	height: 2.3em;
+	left: 0.5em;
+	top: 0.5em;
+}
+
+
+.container > header a {
+	display: inline-block;
+	font-weight: 700;
+	font-variant: small-caps;
+	letter-spacing: 0.3em;
+	padding: 0 0 0 0.5em;
+	text-decoration: none;
+}
+
+.container > header a:hover {
+	opacity: 0.8;
+	transition: linear 0.1s;
+}
+
+.container > header a small {
+	font-variant: normal;
+	font-weight: normal;
+	display: block;
+	font-size: 70%;
+	letter-spacing: 0.1em;
+	font-style: italic;
+}
+
+.container > footer {
+	background: rgba(34, 34, 34, 1);
+	border-top: 4px solid rgba(71, 163, 218, 1);
+}
+
+.main {
+	padding: 1em 1.875em;
+	color: #333;
+	font-weight: 300;
+	line-height: 1.5;
+	text-align: justify;
+
+}
+
+.main p {
+	font-size: 1em;
+	margin-bottom: 2em;
+
+}
+
+.main h2 {
+	font-size: 2em;
+	font-weight: 300;
+	color: #aaa;
+	border-bottom: 1px solid #f0f0f0;
+	text-align: left;
+	margin-bottom: 1em;
+	transition: 0.2s;
+}
+
+@media (max-width: 600px){
+  .main h2 {
+    font-size: 1.3em;
+	transition: 0.2s;
+  }
+}
+
+.nowrap {
+	white-space: nowrap;		
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+}
+
+.alerte {
+	width: 50em;
+	margin: 1em auto;
+	max-width: 90%;
+	background: #FFF;
+	padding: 1em;
+	border-radius: 3px;
+	border: 1px solid #CCC;
+	box-shadow: 0px 0px 12px #CCC;
+}
+
+.alerte.alerte-erreur {
+	border-color: rgba(255, 204, 204, 1);
+	box-shadow: 0px 0px 12px rgba(255, 204, 204, 1);
+	background: rgba(255, 235, 235, 1);
+	color: rgba(187, 0, 0, 1);
+}
+
+.alerte.alerte-info {
+	border-color: rgba(184, 207, 255, 1);
+	box-shadow: 0px 0px 12px rgba(184, 207, 255, 1);
+	background: rgba(209, 224, 255, 1);
+	color: rgba(0, 51, 153, 1);
+}
+
+.alerte.alerte-succes {
+	border-color: rgba(178, 235, 178, 1);
+	box-shadow: 0px 0px 12px rgba(178, 235, 178, 1);
+	background: rgba(204, 255, 204, 1);
+	color: rgba(0, 153, 0, 1);
+}
+
+.alerte.alerte-attention {
+	border-color: rgba(255, 228, 173, 1);
+	box-shadow: 0px 0px 12px rgba(255, 228, 173, 1);
+	background: rgba(247, 238, 217, 1);
+	color: rgba(194, 129, 0, 1);
+}
+
+.nojs {
+	display: none;
+}
+
+.topbar {
+	float:right;
+	width:10%;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	color: white;
+	padding: 10px;
+	background: rgba(51, 51, 51, 1);
+	/*border-bottom-left-radius: 20px;*/
+	display: flex;
+	align-items: center;
+}
+
+.topbar:hover {
+	background: rgba(34, 34, 34, 1);
+}
+.topbar nav {
+	display: inline-block;
+}
+.topbar ul {
+	margin: 0;
+	list-style-type: none;
+}
+
+.topbar ul > li {
+	display: inline-block;
+	padding-right: 5px;
+	border-right: 1px solid rgba(90, 90, 90, 1);
+}
+.topbar ul > li > a {
+	text-decoration: none;
+}
+.topbar ul > li > a:hover {
+	color: rgba(71, 163, 218, 1);
+	transition: linear 0.1s;
+}
+
+.topbar img {
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	margin-left: 10px;
+}
+
+
+.hrmenu {
+	width: 100%;
+	margin-top: 0em;
+	border-bottom: 4px solid rgba(71, 163, 218, 1);
+	background: rgba(51, 51, 51, 1);
+}
+
+/* general ul style */
+.hrmenu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* first level ul style */
+.hrmenu > ul > .hassub > span::after {
+	content: "⌄";
+	padding: 0.5em;
+}
+
+.hrmenu > ul,
+.hrmenu .hrsub-inner {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 1.875em;
+}
+
+.hrmenu > ul > li {
+	display: inline-block;
+}
+
+.hrmenu > ul > li > a,
+.hrmenu > ul > li > span {
+	font-weight: 700;
+	padding: 0.75em 2em;
+	color: #999;
+	display: inline-block;
+	z-index: 100000;
+	cursor:pointer;
+	text-decoration: none;
+	text-align: left;
+	width:auto;
+}
+
+.hrmenu > ul > li > a:hover,
+.hrmenu > ul > li > span:hover {
+	color: rgba(71, 163, 218, 1);
+	transition: linear 0.1s;
+}
+
+.hrmenu > ul > li.hropen a,
+.hrmenu > ul > li.hropen > a:hover,
+.hrmenu > ul > li.hropen span,
+.hrmenu > ul > li.hropen > span:hover {
+	color: #fff;
+	background: rgba(71, 163, 218, 1);
+}
+
+/* sub-menu */
+.hrmenu .hrsub {
+	display: none;
+	position: absolute;
+	background: rgba(71, 163, 218, 1);
+	width: 100%;
+	left: 0;
+	z-index:10;
+}
+
+.hropen .hrsub,
+li.nojs:hover > .hrsub {
+	display: block;
+	padding-bottom: 1em;
+}
+
+.hrmenu .hrsub-inner > div {
+	width: 33%;
+	float: left;
+	padding: 0 2em 0;
+}
+
+.hrmenu .hrsub-inner::before,
+.hrmenu .hrsub-inner::after {
+	content: " ";
+	display: table;
+}
+
+.hrmenu .hrsub-inner::after {
+	clear: both;
+}
+
+.hrmenu .hrsub-inner > div a {
+	line-height: 2em;
+	text-decoration: none;
+	color:#FFF;
+}
+
+.hrmenu .hrsub-inner > div a:hover {
+	opacity: 0.5;
+}
+
+.hrsub h4 {
+	color: rgba(255, 255, 255, 0.5);
+	padding: 1em 0 0.6em;
+	margin: 0;
+	font-size: 160%;
+	font-weight: 300;
+}
+
+footer {
+	position: absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	padding: 0.7em;
+	height:2.5em;
+}
+
+.footsub {
+	flex: 6;
+}
+.footsub h4 {
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 160%;
+	font-weight: 300;
+	padding-bottom: 0.6em;
+}
+
+.footsub a {
+	color: white;
+	text-decoration: none;
+}
+
+.footcredits {
+	color: white;
+	font-weight: lighter;
+	text-align: right;
+	font-size: 0.8em;
+}
+
+@media screen and (max-width: 43em) { 
+	.container > header {
+		transition: linear 0.1s;
+	}
+	.topbar {
+		border: none;
+		border-bottom-left-radius: 0px;
+		position: absolute;
+		left: 0px;
+		justify-content: center;
+	}
+
+	.hrmenu {
+		font-size: 120%;
+		border: none;
+	}
+
+	.hrmenu > ul,
+	.hrmenu .hrsub-inner {
+		width: 100%;
+		padding: 0;
+	}
+
+	.hrmenu .hrsub-inner {
+		padding: 0 2em;
+		font-size: 75%;
+	}
+
+	.hrmenu > ul > li {
+		display: block;
+		border-bottom: 2px solid rgba(71, 163, 218, 1);
+	}
+
+	.hrmenu > ul > li > a,
+	.hrmenu > ul > li > span { 
+		display: block;
+		padding: 0.5em 3em;
+	}
+
+	.hrmenu .hrsub { 
+		position: relative;
+	}
+
+	.hrsub h4 {
+		padding-top: 0.6em;
+	}
+
+	footer {
+		flex-direction: column;
+	}
+
+}
+
+@media screen and (max-width: 36em) { 
+	.hrmenu .hrsub-inner > div {
+		width: 100%;
+		float: none;
+		padding: 0 2em;
+	}
+}

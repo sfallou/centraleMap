@@ -1,0 +1,37 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-calm">
+
+    <h1 class="title">Informations</h1>
+
+    <div class="buttons">
+      <button class="button button-clear" ng-click="modal.hide()">Cancel</button>
+    </div>
+
+  </ion-header-bar>
+
+  <ion-content class="padding">
+
+     <div class="list" style="text-align: center;" ng-if="nomBatiment">
+         <li class="item">
+          Nom du Bâtiment : <b>{{nomBatiment}}</b>
+         </li>
+          <li class="item">
+            <img style="width: 200px; height: 100px;" ng-src="{{image}}">
+         </li>
+         <li class="item item-thumbnail-left item-text-wrap">
+          Type de Bâtiment : <b>{{type}}</b>
+          <br> {{descriptif}}
+         </li>
+         <li class="item">
+          Personnes associées : <b>{{personnes}}</b>
+         </li>
+         <li class="item">
+          Salles : <b>{{salles}}</b>
+         </li>
+      </div>
+    <div ng-hide="nomBatiment">
+      <p> Veuillez séléctionner un bâtiment</p>
+    </div>
+  </ion-content>
+
+</ion-modal-view>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>Central'Map</title>
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/map.css"> <!-- style pour afficher le panneau d'info à droite -->
+
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <script src="lib/leaflet/leaflet.js"></script>
+  <script src="lib/leaflet/angular-leaflet-directive.min.js"></script>
+
+  <script src="lib/ng-cordova.min.js"></script>
+  <script src="cordova.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/controllers/mapController.js"></script>
+   <script src="js/controllers/store.js"></script>
+  <script src="js/services/locationsService.js"></script>
+  <script src="js/services/instructionsService.js"></script>
+  <script src="js/services/datasService.js"></script>
+  <script src="js/directives/igTruncate.js"></script>
+  <script src="js/controllers/Leaflet-textpath/leaflet.textpath.js"></script>  <!-- inclusion du script de textpath, qui permet d'écrire selon une polyline -->
+  <script src="js/controllers/Fuse-master/src/fuse.js"></script> <!-- inclusion du script de fuzzy search, necessaire pour leaflet-fusesearch -->
+  <script src="js/controllers/Fuse-master/src/fuse.min.js"></script>
+  <script src="js/controllers/Leaflet-fusesearch/src/leaflet.fusesearch.js"></script> <!-- inclusion du script de recherche parmis les features de la carte -->
+
+
+</head>
+
+<body ng-app="centralemap" class="platform-ios platform-cordova platform-webview">
+<ion-nav-view></ion-nav-view>
+</body>
+</html>
